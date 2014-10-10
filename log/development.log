@@ -40,3 +40,20 @@ Started GET "/" for 127.0.0.1 at 2014-10-09 19:03:48 +0400
 Processing by Rails::WelcomeController#index as HTML
   Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/railties-4.1.6/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
 Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 11:51:44 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/railties-4.1.6/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 22ms (Views: 6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 11:51:46 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/railties-4.1.6/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 3.1ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 4.8298ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 2.7195ms
+  MOPED: 127.0.0.1:27017 INSERT       database=gimmimo_development collection=users documents=[{"_id"=>BSON::ObjectId('5438346d75627518e4000000'), "name"=>"zu"}] flags=[]
+                         COMMAND      database=gimmimo_development command={:getlasterror=>1, :w=>1} runtime: 26.6297ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=gimmimo_development command={:count=>"users", :query=>{}} runtime: 0.9700ms
