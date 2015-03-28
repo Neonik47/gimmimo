@@ -57,3 +57,784 @@ Completed 200 OK in 4ms (Views: 3.1ms)
   MOPED: 127.0.0.1:27017 INSERT       database=gimmimo_development collection=users documents=[{"_id"=>BSON::ObjectId('5438346d75627518e4000000'), "name"=>"zu"}] flags=[]
                          COMMAND      database=gimmimo_development command={:getlasterror=>1, :w=>1} runtime: 26.6297ms
   MOPED: 127.0.0.1:27017 COMMAND      database=gimmimo_development command={:count=>"users", :query=>{}} runtime: 0.9700ms
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-20 12:34:10 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/railties-4.1.6/lib/rails/templates/rails/welcome/index.html.erb (10.2ms)
+Completed 200 OK in 40ms (Views: 30.9ms)
+
+
+Started GET "/services/weather" for 127.0.0.1 at 2014-10-20 13:44:50 -0700
+Processing by Services::WeatherController#weather as HTML
+  Rendered text template (0.0ms)
+Completed 200 OK in 5ms (Views: 4.1ms)
+
+
+Started GET "/services/weather" for 127.0.0.1 at 2014-10-20 13:48:46 -0700
+Processing by Services::WeatherController#index as HTML
+Completed 500 Internal Server Error in 7ms
+
+ActionView::MissingTemplate (Missing template services/weather/index, application/index with {:locale=>[:ru], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee, :haml]}. Searched in:
+  * "/home/neon/rails/gimmimo/app/views"
+  * "/home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/devise-3.4.0/app/views"
+  * "/home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/kaminari-0.16.1/app/views"
+):
+  app/controllers/services/weather_controller.rb:4:in `index'
+
+
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.5ms)
+
+
+Started GET "/services/weather" for 127.0.0.1 at 2014-10-20 13:49:04 -0700
+Processing by Services::WeatherController#index as HTML
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.5ms)
+
+
+Started GET "/services/weather" for 127.0.0.1 at 2014-10-20 13:50:47 -0700
+Processing by Services::WeatherController#index as HTML
+  Rendered text template (0.0ms)
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `body=' for {"status"=>"ok"}:Hash):
+  app/controllers/services/weather_controller.rb:6:in `block (2 levels) in index'
+  app/controllers/services/weather_controller.rb:5:in `index'
+
+
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.6ms)
+
+
+Started GET "/services/weather" for 127.0.0.1 at 2014-10-20 13:51:13 -0700
+Processing by Services::WeatherController#index as HTML
+  Rendered text template (0.0ms)
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `body=' for {"status"=>"ok"}:Hash):
+  app/controllers/services/weather_controller.rb:6:in `block (2 levels) in index'
+  app/controllers/services/weather_controller.rb:5:in `index'
+
+
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.6ms)
+
+
+Started GET "/services/weather.json" for 127.0.0.1 at 2014-10-20 13:51:19 -0700
+Processing by Services::WeatherController#index as JSON
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `body=' for {"status"=>"ok"}:Hash):
+  app/controllers/services/weather_controller.rb:7:in `block (2 levels) in index'
+  app/controllers/services/weather_controller.rb:5:in `index'
+
+
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.0ms)
+
+
+Started GET "/services/weather.json" for 127.0.0.1 at 2014-10-20 13:51:34 -0700
+
+SyntaxError (/home/neon/rails/gimmimo/app/controllers/services/weather_controller.rb:19: syntax error, unexpected ':', expecting =>
+    {'status': 'ok'}
+              ^
+/home/neon/rails/gimmimo/app/controllers/services/weather_controller.rb:19: syntax error, unexpected '}', expecting keyword_end):
+  app/controllers/services/weather_controller.rb:19: syntax error, unexpected ':', expecting =>
+  app/controllers/services/weather_controller.rb:19: syntax error, unexpected '}', expecting keyword_end
+
+
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.7ms)
+
+
+Started GET "/services/weather.json" for 127.0.0.1 at 2014-10-20 13:53:18 -0700
+Processing by Services::WeatherController#index as JSON
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `body=' for "{\"status\":\"ok\"}":String):
+  app/controllers/services/weather_controller.rb:9:in `block (2 levels) in index'
+  app/controllers/services/weather_controller.rb:7:in `index'
+
+
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.0ms)
+
+
+Started GET "/services/weather.json" for 127.0.0.1 at 2014-10-20 13:54:32 -0700
+Processing by Services::WeatherController#index as JSON
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `body=' for {:status=>"ok"}:Hash):
+  app/controllers/services/weather_controller.rb:9:in `block (2 levels) in index'
+  app/controllers/services/weather_controller.rb:7:in `index'
+
+
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.5ms)
+
+
+Started GET "/services/weather.json" for 127.0.0.1 at 2014-10-20 13:55:10 -0700
+Processing by Services::WeatherController#index as JSON
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `body=' for {:status=>"ok"}:Hash):
+  app/controllers/services/weather_controller.rb:9:in `block (2 levels) in index'
+  app/controllers/services/weather_controller.rb:7:in `index'
+
+
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.7ms)
+
+
+Started GET "/services/weather.json" for 127.0.0.1 at 2014-10-20 13:55:27 -0700
+Processing by Services::WeatherController#index as JSON
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `body=' for {:status=>"ok"}:Hash):
+  app/controllers/services/weather_controller.rb:9:in `block (2 levels) in index'
+  app/controllers/services/weather_controller.rb:7:in `index'
+
+
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.4ms)
+
+
+Started GET "/services/weather.json" for 127.0.0.1 at 2014-10-20 13:56:07 -0700
+Processing by Services::WeatherController#index as JSON
+Completed 406 Not Acceptable in 1ms
+
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  app/controllers/services/weather_controller.rb:7:in `index'
+
+
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.6ms)
+
+
+Started GET "/services/weather.json" for 127.0.0.1 at 2014-10-20 13:56:26 -0700
+Processing by Services::WeatherController#index as JSON
+  Rendered text template (0.0ms)
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `body=' for {:status=>"ok"}:Hash):
+  app/controllers/services/weather_controller.rb:9:in `block (2 levels) in index'
+  app/controllers/services/weather_controller.rb:7:in `index'
+
+
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.1ms)
+
+
+Started GET "/services/weather.json" for 127.0.0.1 at 2014-10-20 13:57:32 -0700
+Processing by Services::WeatherController#index as JSON
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `body=' for {:status=>"ok"}:Hash):
+  app/controllers/services/weather_controller.rb:9:in `block (2 levels) in index'
+  app/controllers/services/weather_controller.rb:7:in `index'
+
+
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.1ms)
+
+
+Started GET "/services/weather.json" for 127.0.0.1 at 2014-10-20 13:57:57 -0700
+Processing by Services::WeatherController#index as JSON
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `headers' for nil:NilClass):
+  turbolinks (2.4.0) lib/turbolinks/x_domain_blocker.rb:14:in `abort_xdomain_redirect'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:424:in `block in make_lambda'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:231:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:231:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.9.1) lib/puma/server.rb:490:in `handle_request'
+  puma (2.9.1) lib/puma/server.rb:361:in `process_client'
+  puma (2.9.1) lib/puma/server.rb:254:in `block in run'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.9.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.9ms)
+
+
+Started GET "/services/weather.json" for 127.0.0.1 at 2014-10-20 13:58:24 -0700
+Processing by Services::WeatherController#index as JSON
+Completed 200 OK in 1ms (Views: 0.2ms)
+
+
+Started GET "/services/weather.json" for 127.0.0.1 at 2014-10-20 13:58:41 -0700
+Processing by Services::WeatherController#index as JSON
+Completed 200 OK in 0ms (Views: 0.1ms)
+
+
+Started GET "/services/weather.json" for 127.0.0.1 at 2014-10-20 13:59:13 -0700
+Processing by Services::WeatherController#index as JSON
+Completed 200 OK in 1ms (Views: 0.2ms)
+
+
+Started GET "/services/weather.json&city=Moscow" for 127.0.0.1 at 2014-10-20 13:59:29 -0700
+Processing by Services::WeatherController#index as 
+Completed 406 Not Acceptable in 1ms
+
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  app/controllers/services/weather_controller.rb:7:in `index'
+
+
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.6ms)
+
+
+Started GET "/services/weather.json?city=Moscow" for 127.0.0.1 at 2014-10-20 13:59:36 -0700
+Processing by Services::WeatherController#index as JSON
+  Parameters: {"city"=>"Moscow"}
+Completed 200 OK in 2ms (Views: 0.6ms)
+
+
+Started GET "/services/weather.json?city=Moscow" for 127.0.0.1 at 2014-10-20 15:41:37 -0700
+Processing by Services::WeatherController#index as JSON
+  Parameters: {"city"=>"Moscow"}
+Completed 500 Internal Server Error in 340ms
+
+NoMethodError (undefined method `json' for #<Weather::OpenWeatherMap:0xc74d950>):
+  app/controllers/services/weather_controller.rb:9:in `block (2 levels) in index'
+  app/controllers/services/weather_controller.rb:7:in `index'
+
+
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.2ms)
+
+
+Started GET "/services/weather.json?city=Moscow" for 127.0.0.1 at 2014-10-20 15:42:15 -0700
+Processing by Services::WeatherController#index as JSON
+  Parameters: {"city"=>"Moscow"}
+Completed 200 OK in 299ms (Views: 1.1ms)
+
+
+Started GET "/services/weather.json?city=Moscow" for 127.0.0.1 at 2014-10-20 15:45:24 -0700
+Processing by Services::WeatherController#index as JSON
+  Parameters: {"city"=>"Moscow"}
+Completed 200 OK in 129ms (Views: 0.7ms)
+
+
+Started GET "/services/weather.json?city=Moscow" for 127.0.0.1 at 2014-10-20 15:46:18 -0700
+Processing by Services::WeatherController#index as JSON
+  Parameters: {"city"=>"Moscow"}
+Completed 200 OK in 143ms (Views: 1.8ms)
+
+
+Started GET "/services/weather.xml?city=Moscow" for 127.0.0.1 at 2014-10-20 15:46:53 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"city"=>"Moscow"}
+Completed 200 OK in 490ms (Views: 87.3ms)
+
+
+Started GET "/services/weather.xml?city=Moscow" for 127.0.0.1 at 2014-10-20 15:53:35 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"city"=>"Moscow"}
+Completed 500 Internal Server Error in 520ms
+
+JSON::ParserError (757: unexpected token at '<?xml version="1.0" encoding="utf-8"?>
+<current>
+  <city id="524901" name="Moscow">
+    <coord lon="37.62" lat="55.75"/>
+    <country>RU</country>
+    <sun rise="2014-10-20T04:11:24" set="2014-10-20T14:17:06"/>
+  </city>
+  <temperature value="1.68" min="1" max="2.6" unit="celsius"/>
+  <humidity value="100" unit="%"/>
+  <pressure value="993" unit="hPa"/>
+  <wind>
+    <speed value="3" name="Light breeze"/>
+    <direction value="70" code="ENE" name="East-northeast"/>
+  </wind>
+  <clouds value="90" name="overcast clouds"/>
+  <visibility/>
+  <precipitation value="4.8" mode="rain" unit="3h"/>
+  <weather number="501" value="moderate rain" icon="10n"/>
+  <lastupdate value="2014-10-20T22:42:25"/>
+</current>
+
+'):
+  app/models/weather/open_weather_map.rb:27:in `generate_request'
+  app/models/weather/open_weather_map.rb:20:in `initialize'
+  app/controllers/services/weather_controller.rb:21:in `new'
+  app/controllers/services/weather_controller.rb:21:in `current_weather'
+  app/controllers/services/weather_controller.rb:10:in `block (2 levels) in index'
+  app/controllers/services/weather_controller.rb:7:in `index'
+
+
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.3ms)
+
+
+Started GET "/services/weather.xml?city=Moscow" for 127.0.0.1 at 2014-10-20 15:58:55 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"city"=>"Moscow"}
+Completed 200 OK in 188ms (Views: 0.5ms)
+
+
+Started GET "/services/weather.json?city=Moscow" for 127.0.0.1 at 2014-10-20 15:59:25 -0700
+Processing by Services::WeatherController#index as JSON
+  Parameters: {"city"=>"Moscow"}
+Completed 200 OK in 164ms (Views: 2.9ms)
+
+
+Started GET "/services/weather.json?city=Moscow" for 127.0.0.1 at 2014-10-20 16:06:08 -0700
+Processing by Services::WeatherController#index as JSON
+  Parameters: {"city"=>"Moscow"}
+Completed 200 OK in 248ms (Views: 1.3ms)
+
+
+Started GET "/services/weather.xml?city=Moscow" for 127.0.0.1 at 2014-10-20 16:06:18 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"city"=>"Moscow"}
+Completed 200 OK in 136ms (Views: 0.2ms)
+
+
+Started GET "/services/weather.json?city=Moscow" for 127.0.0.1 at 2014-10-20 16:07:23 -0700
+Processing by Services::WeatherController#index as JSON
+  Parameters: {"city"=>"Moscow"}
+Completed 200 OK in 134ms (Views: 0.7ms)
+
+
+Started GET "/services/weather.html?city=Moscow" for 127.0.0.1 at 2014-10-20 16:07:41 -0700
+Processing by Services::WeatherController#index as HTML
+  Parameters: {"city"=>"Moscow"}
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms)
+
+
+Started GET "/services/weather.html?city=Moscow" for 127.0.0.1 at 2014-10-20 16:08:08 -0700
+Processing by Services::WeatherController#index as HTML
+  Parameters: {"city"=>"Moscow"}
+Completed 500 Internal Server Error in 273ms
+
+ActionView::MissingTemplate (Missing template <!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+  <meta name="keywords" content="weather, world, Openstreetmap, weather, layer" />
+  <meta name="description" content="A layer with current weather conditions in cities for world wide" />
+	<meta name="domain" content="openweathermap.org" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="-1" />
+<style type="text/css">
+</style>
+</head>
+
+<body>
+
+<div style="font-size: medium; font-weight: bold; margin-bottom: 0px;">Moscow</div> 
+<div style="float: left; width: 130px;" >
+<div style="display: block; clear: left;" >
+<div style="float: left;" title="Titel">
+<img height="45" width="45" style="border: medium none; width: 45px; height: 45px; background: url(&quot;http://openweathermap.org/img/w/09n.png&quot;) repeat scroll 0% 0% transparent;" alt="title" src="http://openweathermap.org/images/transparent.png"/></div>
+<div style="float: left;" >
+<div style="display: block; clear: left; font-size: medium; font-weight: bold; padding: 0pt 3pt;" title="Current Temperature">1.72°</div>
+<div style="display: block; width: 85px; overflow: visible;" >
+</div></div></div>
+<div style="display: block; clear: left; font-size: small;">Clouds: 90%</div>
+<div style="display: block; clear: left; color: gray; font-size: x-small;" >Humidity: 100%</div>
+<div style="display: block; clear: left; color: gray; font-size: x-small;" >Wind: 3 m/s</div>
+<div style="display: block; clear: left; color: gray; font-size: x-small;" >Pressure: 993hpa</div>
+</div>
+<div style="display: block; clear: left; color: gray; font-size: x-small;">
+<a href="http://openweathermap.org/city/524901" target="_blank">More..</a>
+</div>
+</div>
+
+</body>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31601618-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</html>
+
+ with {:locale=>[:ru], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee, :haml]}. Searched in:
+  * "/home/neon/rails/gimmimo/app/views"
+  * "/home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/devise-3.4.0/app/views"
+  * "/home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/kaminari-0.16.1/app/views"
+  * "/home/neon/rails/gimmimo"
+  * "/"
+):
+  app/controllers/services/weather_controller.rb:8:in `block (2 levels) in index'
+  app/controllers/services/weather_controller.rb:7:in `index'
+
+
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.9ms)
+
+
+Started GET "/services/weather.html?city=Moscow" for 127.0.0.1 at 2014-10-20 16:10:05 -0700
+Processing by Services::WeatherController#index as HTML
+  Parameters: {"city"=>"Moscow"}
+  Rendered html template (0.1ms)
+Completed 200 OK in 291ms (Views: 14.3ms)
+
+
+Started GET "/services/weather.html?city=Moscow" for 127.0.0.1 at 2014-10-20 16:10:45 -0700
+Processing by Services::WeatherController#index as HTML
+  Parameters: {"city"=>"Moscow"}
+  Rendered html template (0.1ms)
+Completed 200 OK in 180ms (Views: 1.6ms)
+
+
+Started GET "/services/weather.xml?lon=55.585992&lat=37.695949" for 127.0.0.1 at 2014-10-20 16:11:54 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"lon"=>"55.585992", "lat"=>"37.695949"}
+Completed 200 OK in 164ms (Views: 0.6ms)
+
+
+Started GET "/services/weather.xml?lon=55.585992&lat=37.695949" for 127.0.0.1 at 2014-10-20 16:13:24 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"lon"=>"55.585992", "lat"=>"37.695949"}
+Completed 200 OK in 297ms (Views: 0.2ms)
+
+
+Started GET "/services/weather.xml?lon=55.585992&lat=37.695949" for 127.0.0.1 at 2014-10-20 16:13:26 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"lon"=>"55.585992", "lat"=>"37.695949"}
+Completed 200 OK in 144ms (Views: 0.2ms)
+
+
+Started GET "/services/weather.xml?lon=55.585992&lat=37.695949" for 127.0.0.1 at 2014-10-20 16:13:27 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"lon"=>"55.585992", "lat"=>"37.695949"}
+Completed 200 OK in 132ms (Views: 0.2ms)
+
+
+Started GET "/services/weather.json?lon=55.585992&lat=37.695949" for 127.0.0.1 at 2014-10-20 16:13:46 -0700
+Processing by Services::WeatherController#index as JSON
+  Parameters: {"lon"=>"55.585992", "lat"=>"37.695949"}
+Completed 200 OK in 219ms (Views: 2.0ms)
+
+
+Started GET "/services/weather.xml?lon=55.585992&lat=37.695949" for 127.0.0.1 at 2014-10-20 16:15:08 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"lon"=>"55.585992", "lat"=>"37.695949"}
+Completed 200 OK in 182ms (Views: 0.2ms)
+
+
+Started GET "/services/weather.json?lon=55.585992&lat=37.695949" for 127.0.0.1 at 2014-10-20 16:15:34 -0700
+Processing by Services::WeatherController#index as JSON
+  Parameters: {"lon"=>"55.585992", "lat"=>"37.695949"}
+Completed 200 OK in 317ms (Views: 1.9ms)
+
+
+Started GET "/services/weather.html?lon=55.585992&lat=37.695949" for 127.0.0.1 at 2014-10-20 16:16:04 -0700
+Processing by Services::WeatherController#index as HTML
+  Parameters: {"lon"=>"55.585992", "lat"=>"37.695949"}
+  Rendered html template (0.1ms)
+Completed 200 OK in 134ms (Views: 1.9ms)
+
+
+Started GET "/services/weather.json?lon=-55.585992&lat=37.695949" for 127.0.0.1 at 2014-10-20 16:28:43 -0700
+Processing by Services::WeatherController#index as JSON
+  Parameters: {"lon"=>"-55.585992", "lat"=>"37.695949"}
+Completed 200 OK in 354ms (Views: 1.4ms)
+
+
+Started GET "/services/weather.json?lon=55.585992&lat=-37.695949" for 127.0.0.1 at 2014-10-20 16:29:11 -0700
+Processing by Services::WeatherController#index as JSON
+  Parameters: {"lon"=>"55.585992", "lat"=>"-37.695949"}
+Completed 200 OK in 130ms (Views: 1.6ms)
+
+
+Started GET "/services/weather.json?lon=38.923983&lat=-8.9299" for 127.0.0.1 at 2014-10-20 16:32:02 -0700
+Processing by Services::WeatherController#index as JSON
+  Parameters: {"lon"=>"38.923983", "lat"=>"-8.9299"}
+Completed 200 OK in 304ms (Views: 1.9ms)
+
+
+Started GET "/services/weather.xml?lon=38.923983&lat=-8.9299" for 127.0.0.1 at 2014-10-20 16:32:21 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"lon"=>"38.923983", "lat"=>"-8.9299"}
+Completed 200 OK in 126ms (Views: 0.3ms)
+
+
+Started GET "/services/weather.xml?city=London" for 127.0.0.1 at 2014-10-20 16:32:57 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"city"=>"London"}
+Completed 200 OK in 174ms (Views: 1.2ms)
+
+
+Started GET "/services/weather.xml?city=Lissabon" for 127.0.0.1 at 2014-10-20 16:33:10 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"city"=>"Lissabon"}
+Completed 200 OK in 204ms (Views: 0.1ms)
+
+
+Started GET "/services/weather.xml?lat=38.923983&lon=-8.9299" for 127.0.0.1 at 2014-10-20 16:33:35 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"lat"=>"38.923983", "lon"=>"-8.9299"}
+Completed 200 OK in 155ms (Views: 1.2ms)
+
+
+Started GET "/services/weather.xml?lon=-9.15&lat=38.73" for 127.0.0.1 at 2014-10-20 16:35:14 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"lon"=>"-9.15", "lat"=>"38.73"}
+Completed 200 OK in 195ms (Views: 0.7ms)
+
+
+Started GET "/services/weather.xml?lon=-9.15&lat=38.73" for 127.0.0.1 at 2014-10-20 16:36:27 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"lon"=>"-9.15", "lat"=>"38.73"}
+http://api.openweathermap.org/data/2.5/weather?units=metric&q=Moscow&mode=xml
+Completed 200 OK in 154ms (Views: 1.1ms)
+
+
+Started GET "/services/weather.xml?lon=-9.15&lat=38.73" for 127.0.0.1 at 2014-10-20 16:36:47 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"lon"=>"-9.15", "lat"=>"38.73"}
+http://api.openweathermap.org/data/2.5/weather?units=metric&q=Moscow&mode=xml&q=Moscow&mode=xml
+Completed 200 OK in 131ms (Views: 0.7ms)
+
+
+Started GET "/services/weather.xml?lon=-9.15&lat=38.73" for 127.0.0.1 at 2014-10-20 16:37:01 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"lon"=>"-9.15", "lat"=>"38.73"}
+http://api.openweathermap.org/data/2.5/weather?units=metric&q=Moscow&mode=xml&q=Moscow&mode=xml&q=Moscow&mode=xml
+Completed 200 OK in 136ms (Views: 0.7ms)
+
+
+Started GET "/services/weather.xml?lon=-9.15&lat=38.73" for 127.0.0.1 at 2014-10-20 16:38:13 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"lon"=>"-9.15", "lat"=>"38.73"}
+http://api.openweathermap.org/data/2.5/weather?units=metric&q=Moscow&mode=xml
+Completed 200 OK in 251ms (Views: 0.4ms)
+
+
+Started GET "/services/weather.xml?lon=-9.15&lat=38.73" for 127.0.0.1 at 2014-10-20 16:39:17 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"lon"=>"-9.15", "lat"=>"38.73"}
+{"lon"=>"-9.15", "lat"=>"38.73", "action"=>"index", "controller"=>"services/weather", "format"=>"xml"}
+http://api.openweathermap.org/data/2.5/weather?units=metric&q=Moscow&mode=xml
+Completed 200 OK in 132ms (Views: 0.6ms)
+
+
+Started GET "/services/weather.xml?lon=-9.15&lat=38.73" for 127.0.0.1 at 2014-10-20 16:40:51 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"lon"=>"-9.15", "lat"=>"38.73"}
+{"lon"=>"-9.15", "lat"=>"38.73", "action"=>"index", "controller"=>"services/weather", "format"=>"xml"}
+DEF
+http://api.openweathermap.org/data/2.5/weather?units=metric&q=Moscow&mode=xml
+Completed 200 OK in 285ms (Views: 0.3ms)
+
+
+Started GET "/services/weather.xml?lon=-9.15&lat=38.73" for 127.0.0.1 at 2014-10-20 16:41:27 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"lon"=>"-9.15", "lat"=>"38.73"}
+{"lon"=>"-9.15", "lat"=>"38.73", "action"=>"index", "controller"=>"services/weather", "format"=>"xml"}
+Completed 500 Internal Server Error in 1ms
+
+ArgumentError (wrong number of arguments (3 for 0..1)):
+  app/models/weather/open_weather_map.rb:9:in `initialize'
+  app/controllers/services/weather_controller.rb:22:in `new'
+  app/controllers/services/weather_controller.rb:22:in `current_weather'
+  app/controllers/services/weather_controller.rb:11:in `block (2 levels) in index'
+  app/controllers/services/weather_controller.rb:8:in `index'
+
+
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.0ms)
+
+
+Started GET "/services/weather.xml?lon=-9.15&lat=38.73" for 127.0.0.1 at 2014-10-20 16:41:41 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"lon"=>"-9.15", "lat"=>"38.73"}
+{"lon"=>"-9.15", "lat"=>"38.73", "action"=>"index", "controller"=>"services/weather", "format"=>"xml"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `+' for nil:NilClass):
+  app/models/weather/open_weather_map.rb:9:in `initialize'
+  app/controllers/services/weather_controller.rb:22:in `new'
+  app/controllers/services/weather_controller.rb:22:in `current_weather'
+  app/controllers/services/weather_controller.rb:11:in `block (2 levels) in index'
+  app/controllers/services/weather_controller.rb:8:in `index'
+
+
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.7ms)
+
+
+Started GET "/services/weather.xml?lon=-9.15&lat=38.73" for 127.0.0.1 at 2014-10-20 16:42:14 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"lon"=>"-9.15", "lat"=>"38.73"}
+{"lon"=>"-9.15", "lat"=>"38.73", "action"=>"index", "controller"=>"services/weather", "format"=>"xml"}
+Completed 500 Internal Server Error in 1ms
+
+TypeError (no implicit conversion of nil into String):
+  app/models/weather/open_weather_map.rb:9:in `+'
+  app/models/weather/open_weather_map.rb:9:in `initialize'
+  app/controllers/services/weather_controller.rb:22:in `new'
+  app/controllers/services/weather_controller.rb:22:in `current_weather'
+  app/controllers/services/weather_controller.rb:11:in `block (2 levels) in index'
+  app/controllers/services/weather_controller.rb:8:in `index'
+
+
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/neon/.rvm/gems/ruby-2.1.3@gimmimo/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.7ms)
+
+
+Started GET "/services/weather.xml?lon=-9.15&lat=38.73" for 127.0.0.1 at 2014-10-20 16:42:42 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"lon"=>"-9.15", "lat"=>"38.73"}
+{"lon"=>"-9.15", "lat"=>"38.73", "action"=>"index", "controller"=>"services/weather", "format"=>"xml"}
+38.73/-9.15/
+COORDS
+http://api.openweathermap.org/data/2.5/weather?units=metric&lat=38.73&lon=-9.15&mode=xml
+Completed 200 OK in 214ms (Views: 0.4ms)
+
+
+Started GET "/services/weather.xml?lon=37.694904&lat=55.585519" for 127.0.0.1 at 2014-10-20 16:44:02 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"lon"=>"37.694904", "lat"=>"55.585519"}
+{"lon"=>"37.694904", "lat"=>"55.585519", "action"=>"index", "controller"=>"services/weather", "format"=>"xml"}
+55.585519/37.694904/
+COORDS
+http://api.openweathermap.org/data/2.5/weather?units=metric&lat=38.73&lon=-9.15&mode=xml&lat=55.585519&lon=37.694904&mode=xml
+Completed 200 OK in 726ms (Views: 0.6ms)
+
+
+Started GET "/services/weather.json?lon=37.694904&lat=55.585519" for 127.0.0.1 at 2014-10-20 16:44:11 -0700
+Processing by Services::WeatherController#index as JSON
+  Parameters: {"lon"=>"37.694904", "lat"=>"55.585519"}
+{"lon"=>"37.694904", "lat"=>"55.585519", "action"=>"index", "controller"=>"services/weather", "format"=>"json"}
+55.585519/37.694904/
+COORDS
+http://api.openweathermap.org/data/2.5/weather?units=metric&lat=38.73&lon=-9.15&mode=xml&lat=55.585519&lon=37.694904&mode=xml&lat=55.585519&lon=37.694904&mode=json
+Completed 200 OK in 160ms (Views: 1.4ms)
+
+
+Started GET "/services/weather.xml?lon=37.694904&lat=55.585519" for 127.0.0.1 at 2014-10-20 16:44:32 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"lon"=>"37.694904", "lat"=>"55.585519"}
+{"lon"=>"37.694904", "lat"=>"55.585519", "action"=>"index", "controller"=>"services/weather", "format"=>"xml"}
+55.585519/37.694904/
+COORDS
+http://api.openweathermap.org/data/2.5/weather?units=metric&lat=38.73&lon=-9.15&mode=xml&lat=55.585519&lon=37.694904&mode=xml&lat=55.585519&lon=37.694904&mode=json&lat=55.585519&lon=37.694904&mode=xml
+Completed 200 OK in 141ms (Views: 0.2ms)
+
+
+Started GET "/services/weather.xml?lon=37.694904&lat=55.585519" for 127.0.0.1 at 2014-10-20 16:44:36 -0700
+Processing by Services::WeatherController#index as XML
+  Parameters: {"lon"=>"37.694904", "lat"=>"55.585519"}
+{"lon"=>"37.694904", "lat"=>"55.585519", "action"=>"index", "controller"=>"services/weather", "format"=>"xml"}
+55.585519/37.694904/
+COORDS
+http://api.openweathermap.org/data/2.5/weather?units=metric&lat=38.73&lon=-9.15&mode=xml&lat=55.585519&lon=37.694904&mode=xml&lat=55.585519&lon=37.694904&mode=json&lat=55.585519&lon=37.694904&mode=xml&lat=55.585519&lon=37.694904&mode=xml
+Completed 200 OK in 158ms (Views: 0.3ms)
+
+
+Started GET "/services/weather.json?lon=37.694904&lat=55.585519" for 127.0.0.1 at 2014-10-20 16:44:37 -0700
+Processing by Services::WeatherController#index as JSON
+  Parameters: {"lon"=>"37.694904", "lat"=>"55.585519"}
+{"lon"=>"37.694904", "lat"=>"55.585519", "action"=>"index", "controller"=>"services/weather", "format"=>"json"}
+55.585519/37.694904/
+COORDS
+http://api.openweathermap.org/data/2.5/weather?units=metric&lat=38.73&lon=-9.15&mode=xml&lat=55.585519&lon=37.694904&mode=xml&lat=55.585519&lon=37.694904&mode=json&lat=55.585519&lon=37.694904&mode=xml&lat=55.585519&lon=37.694904&mode=xml&lat=55.585519&lon=37.694904&mode=json
+Completed 200 OK in 255ms (Views: 0.7ms)
